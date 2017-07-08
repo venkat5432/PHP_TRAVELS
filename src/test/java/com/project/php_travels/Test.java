@@ -18,7 +18,7 @@ public class Test {
 		driver.get("https://www.google.co.in");
 		*/
 		
-		/*
+		/* 	
 		System.setProperty("webdriver.chrome.driver", "C:\\Custom_Softwares\\chromedriver_win32\\chromedriver.exe");
 		WebDriver driver=new ChromeDriver();
 		driver.get("https://www.yahoo.co.in");
