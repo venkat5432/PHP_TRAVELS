@@ -3,11 +3,11 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="com.project.php_travels.Test">
+      <class name="com.php_travels.webdriver.Test">
         <methods>
           <include name="test"/>
         </methods>
-      </class> <!-- com.project.php_travels.Test -->
+      </class> <!-- com.php_travels.webdriver.Test -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
