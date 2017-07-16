@@ -3,7 +3,7 @@
 <suite guice-stage="DEVELOPMENT" name="Default suite">
   <test verbose="2" name="Default test">
     <classes>
-      <class name="com.project.php_travels.Test"/>
+      <class name="testcases.Login_Tests"/>
     </classes>
   </test> <!-- Default test -->
 </suite> <!-- Default suite -->

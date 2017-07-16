@@ -5,10 +5,13 @@ import common.PropertyReader;
 public class Configurations {
 
 	
-	private static final String config_file="config.properties";
+	public static final String config_file="config.properties";
+
 	
 	static PropertyReader prop=new PropertyReader(config_file);;
-	
+
+
+
 
 	
 
