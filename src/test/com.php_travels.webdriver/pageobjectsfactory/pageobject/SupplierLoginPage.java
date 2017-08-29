@@ -5,11 +5,12 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.testng.Assert;
+import testcases.Login_Tests;
 
 /**
  * Created by rave7003 on 16-07-2017.
  */
-public class SupplierLoginPage extends BasePageObject{
+public class SupplierLoginPage  extends BasePageObject{
 
 
 
@@ -39,7 +40,7 @@ public class SupplierLoginPage extends BasePageObject{
     }
 
     public void verifyUserLoggedIn() {
-        actions.waitTillElementPresent(supplierWelcomeMsg);
+        waitTillElementPresent(supplierWelcomeMsg);
 
         System.out.print("assertions passed");
 

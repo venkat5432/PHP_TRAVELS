@@ -4,27 +4,28 @@ package testcases;
 
 import java.io.IOException;
 
-import org.testng.Assert;
-import org.testng.annotations.AfterTest;
+import common.BaseTestClass;
 import org.testng.annotations.Test;
 import common.Credentials;
 import pageobjectsfactory.pageobject.AdminLoginPage;
+import pageobjectsfactory.pageobject.BasePageObject;
 import pageobjectsfactory.pageobject.LoginPage;
 import pageobjectsfactory.pageobject.SupplierLoginPage;
 
-public class Login_Tests {
+public class Login_Tests extends BaseTestClass {
 
 	Credentials credentials= new Credentials();
 	
 	
 	@Test
-	public void homePageFrontEndLogin() throws IOException
+	public void homePageFrontEndLogin()
 	{
 		LoginPage loginPage=new LoginPage();
 		loginPage.openLoginPage();
 		loginPage.verifyLoginPage();
 		loginPage.login(credentials.userId,credentials.password);
         loginPage.verifyUserLoggedIn();
+        loginPage.closeBrowser();
     }
 
 
@@ -36,6 +37,7 @@ public class Login_Tests {
         adminLoginPage.verifyLoginPage();
         adminLoginPage.login(credentials.adminUserId,credentials.adminPassword);
         adminLoginPage.verifyUserLoggedIn();
+        adminLoginPage.closeBrowser();
 	}
 
 
@@ -47,6 +49,7 @@ public class Login_Tests {
         supplierLoginPage.verifyLoginPage();
         supplierLoginPage.login(credentials.supplierUserId,credentials.supplierPassword);
         supplierLoginPage.verifyUserLoggedIn();
+        supplierLoginPage.closeBrowser();
 	}
 
 

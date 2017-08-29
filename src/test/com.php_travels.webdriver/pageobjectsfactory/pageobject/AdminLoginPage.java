@@ -5,11 +5,12 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.testng.Assert;
+import testcases.Login_Tests;
 
 /**
  * Created by rave7003 on 16-07-2017.
  */
-public class AdminLoginPage extends BasePageObject{
+public class AdminLoginPage extends BasePageObject {
 
 
     private  static final By superAdminWelcomeMsg=By.xpath("//span[text()='Super Admin']") ;
@@ -38,8 +39,7 @@ public class AdminLoginPage extends BasePageObject{
     }
 
     public void verifyUserLoggedIn() {
-        actions.waitTillElementPresent(superAdminWelcomeMsg);
-
+        waitTillElementPresent(superAdminWelcomeMsg);
         System.out.print("assertions passed");
 
     }

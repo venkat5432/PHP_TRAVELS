@@ -1,14 +1,11 @@
 package pageobjectsfactory.pageobject;
 
 import common.UrlHolder;
-import common.WebDriverProvider;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
-import org.testng.annotations.AfterTest;
+import testcases.Login_Tests;
 
 
 public class LoginPage extends BasePageObject {
@@ -43,10 +40,9 @@ public class LoginPage extends BasePageObject {
     }
 
     public void verifyUserLoggedIn() {
-        actions.waitTillElementPresent(welcomeMessage);
-
+        waitTillElementPresent(welcomeMessage);
         System.out.print("assertions passed");
-
+        //driver.close();
     }
 
 }

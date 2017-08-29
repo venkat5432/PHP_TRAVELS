@@ -12,20 +12,19 @@ import org.openqa.selenium.ie.InternetExplorerDriver;
 
 public class WebDriverProvider {
 
-WebDriver driver;
+    WebDriver driver;
 
 
-    public WebDriver getDriver ()
-    {
-        PropertyReader prop= new PropertyReader(Configurations.config_file);
-        String browser=prop.getValue("browser");
+    public void initDriver () {
+        PropertyReader prop = new PropertyReader(Configurations.config_file);
+        String browser = prop.getValue("browser");
         try {
             if (browser.equalsIgnoreCase("FF")) {
                 System.setProperty("webdriver.gecko.driver", "resources/geckodriver_Firefox/geckodriver.exe");
                 driver = new FirefoxDriver();
             }
 
-          //  C:\Custom_Softwares\chromedriver_win32\chromedriver.exe
+            //  C:\Custom_Softwares\chromedriver_win32\chromedriver.exe
             if (browser.equalsIgnoreCase("Chrome")) {
                 System.setProperty("webdriver.chrome.driver", "resources/chromedriver/chromedriver.exe");
                 driver = new ChromeDriver();
@@ -39,11 +38,15 @@ WebDriver driver;
                 System.setProperty("webdriver.edge.driver", "resources/Edgedriver/MicrosoftWebDriver.exe");
                 driver = new EdgeDriver();
             }
-        }
-        catch (Exception e)
-        {
+        } catch (Exception e) {
             e.printStackTrace();
         }
+    }
+
+        public WebDriver returnDriver()
+    {
         return driver;
     }
+
+
 }
